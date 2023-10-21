@@ -3,7 +3,7 @@ import { useState } from "react";
 export function useWhatsApp() {
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const items = ["+573152084292"];
+  const items = ["+573168759933", "+573165273760"];
 
   const handleItemClick = (index) => {
     setSelectedItem(index);
