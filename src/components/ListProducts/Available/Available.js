@@ -103,32 +103,9 @@ export function Available(props) {
       <h5>{product.productData.name_extend}</h5>
       <div className={styles.product}>
         <div className={styles.price}>
-          {product.productData.price1 > 0 && (
-            <h6>$ {format(product.productData.price1)}</h6>
-          )}
-          {product.productData.price2 > 0 && (
-            <></>
-            // <h6>Por mayor $ {format(product.productData.price2)}</h6>
-          )}
-        </div>
-
-        <div
-          className={styles.WhatsApp}
-          onClick={() =>
-            addProductToWhatsApp(
-              product.productData.images +
-                " " +
-                product.productData.name_extend +
-                " " +
-                "Referencia: " +
-                product.productData.ref
-            )
-          }
-        >
-          <BsWhatsapp size={25} color="white" />
+        <h6>$ {format(product.productData.price1)}</h6>
         </div>
       </div>
-      {/* <h7>Disponible: {product.productData.qty}</h7> */}
       <Button
         color="primary"
         onClick={() => addProductId(product.productData.codigo)}

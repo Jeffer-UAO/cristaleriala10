@@ -7,8 +7,10 @@ export function Listproducts(props) {
   const { products, title } = props;
 
   return (
+    <div className={styles.product}>
+     <h4>{title}</h4>
     <div className={styles.listProduct}>
-    <h4>{title}</h4>
+   
       <div className={styles.product}>
         {map(products, (product, index) => (
           <div className={styles.content_image}>
@@ -25,5 +27,7 @@ export function Listproducts(props) {
         ))}
       </div>
     </div>
+    </div>
+    
   );
 }

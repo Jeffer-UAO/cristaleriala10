@@ -1,36 +1,25 @@
-.listProduct {
-  padding: 1rem;
-  background-color: rgb(232, 232, 232);
-
-  
+.product {
   h4 {
-    text-transform: capitalize;
-    margin: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background-color: rgb(69, 112, 122);
+    color: rgb(255, 255, 255);
+    padding: 0.3rem;
   }
+}
+
+.listProduct {
+  padding: 0.5rem;
 
   .product {
-    column-count: 2;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
     .content_image {
-      break-inside: avoid;
-      float: none;
-      padding-bottom: 1rem;
-      
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    .product {     
-      padding: 0 5rem 0 5rem;
-     
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-     
-      .content_image {
-        display: flex;
-        padding-bottom: 0;
-      }
+     border: solid 1px rgb(185, 185, 185);
+     border-radius: 0.5rem;
+     padding: 0.5rem;
     }
   }
 }
