@@ -45,7 +45,7 @@ export function ListCart(props) {
             <div className={styles.detalle}>
               <p className={styles.name}>{item.name_extend}</p>
 
-              <p className={styles.price}>$. {format(item.price1)} </p>
+              <p className={styles.price}>$ {format(item.price1)} </p>
               {/* <p className={styles.price}>Mayor: $ {item.price2}</p> */}
 
 

@@ -64,10 +64,12 @@
     }
 
     img {
-      max-width: 8rem;
-      max-height: 10rem;
+      
+      max-width: 6rem;     
+      max-height: 9rem; 
       object-fit: cover;
       object-position: center center;
+      border-radius: 0.5rem;
     }
   }
 }
