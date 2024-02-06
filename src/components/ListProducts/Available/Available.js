@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { BASE_NAME } from "@/config/constants";
-import { useCart } from "@/hooks/useCart";
-import { WhatsApp } from "@/components/WhatsApp";
-import { map } from "lodash";
-import { useWhatsApp } from "@/hooks";
+import { useWhatsApp, useCart, useAuth } from "@/hooks";
 import Link from "next/link";
 import { toast } from "react-toastify";
 
@@ -24,6 +21,7 @@ import styles from "./Available.module.scss";
 
 export function Available(props) {
   const { product } = props;
+  const { user } = useAuth();
   const { addCart, loading } = useCart();
   const { generateWhatsAppLink, items, selectedItem, handleItemClick } =
     useWhatsApp();
@@ -97,13 +95,17 @@ export function Available(props) {
   return (
     <div className={styles.list__product}>
       <Link href={`/${product.productData.slug}`}>
-        <CardImg alt="Card image cap"  src={product.productData.image_alterna} />
+        <CardImg alt="Card image cap" src={product.productData.image_alterna} />
       </Link>
 
       <h5>{product.productData.name_extend}</h5>
       <div className={styles.product}>
         <div className={styles.price}>
-        <h6>$ {format(product.productData.price1)}</h6>
+          <h6>$ {format(product.productData.price1)}</h6>
+
+          {user && (        
+              <h6>Mayor $ {format(product.productData.price2)}</h6>       
+          )}
         </div>
       </div>
       <Button

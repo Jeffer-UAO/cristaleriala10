@@ -13,7 +13,7 @@ export function Listproducts(props) {
    
       <div className={styles.product}>
         {map(products, (product, index) => (
-          <div className={styles.content_image}>
+          <div className={styles.content_image} key={index}>
             {product.productData.active && (
               <>
                 {!product.productData.soldout ? (

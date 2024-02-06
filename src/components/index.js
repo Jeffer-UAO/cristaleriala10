@@ -15,3 +15,4 @@ export * from "./Layout";
  export * from "./FooterCart";
  export * from "./Redes";
  export * from "./SearchTable";
+ export * from "./LoginFormClient";

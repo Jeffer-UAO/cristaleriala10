@@ -3,7 +3,6 @@ import {
   FooterApp,
   Promotion,
   NotFound,
-  Separator,
   Redes,
 } from "@/components";
 import { size } from "lodash";

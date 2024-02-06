@@ -9,7 +9,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 import styles from "./FooterApp.module.scss";
 
-import { BtnLink } from "../Common";
+import { BtnLink, BtnModal } from "../Common";
 import {
   Button,
   Modal,
@@ -68,12 +68,15 @@ export function FooterApp() {
           />
         </div>
 
-        <BtnLink
+        {/* <BtnLink
           link={"https://cristaleriala10.catalogointeractivo.com.co/admin-dashboard/"}
           title={"ADMI"}
           logo={<CiUser size={20} color='#dfc979' />}
-        />
+        /> */}
+
+        <BtnModal />
       </div>
+     
 
       <Modal centered isOpen={isOpen} toggle={toggleModal}>
         <ModalHeader toggle={toggleModal}>Seleccione una Linea</ModalHeader>

@@ -6,18 +6,7 @@ export function ModalBasic(props) {
   const { show, size, title, children, onClose } = props;
   return (
     <div>
-      <Modal
-      centered
-        toggle={onClose}
-        keyboard={true}
-        isOpen={show}
-        size={size}
-        className="modal-basic"
-   
-      >
-        {title && <ModalHeader toggle={onClose}>{title}</ModalHeader>}
-        <ModalBody>{children}</ModalBody>
-      </Modal>
+      
     </div>
   );
 }

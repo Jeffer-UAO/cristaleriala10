@@ -61,8 +61,6 @@ export function CartProvider(props) {
     setTotal(cartCtrl.count());
     setCart(cartCtrl.getAll());
   };
-
-
   
 
   const data = {

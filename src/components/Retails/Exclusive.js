@@ -21,10 +21,9 @@ export function Exclusive(props) {
           products,
           (product, index) =>
             product.home && (
-              <>
+              <div key={index}>
                 {product.images ? (
-                  <Link
-                    key={index}
+                  <Link                   
                     href={`/${product.slug}`}
                     className={styles.list__product}
                   >
@@ -55,7 +54,7 @@ export function Exclusive(props) {
                     </div>
                   </Link>
                 )}
-              </>
+              </div>
             )
         )}
       </div>

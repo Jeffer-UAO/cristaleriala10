@@ -20,10 +20,9 @@ export function Promotion(props) {
           products,
           (product, index) =>
             product.offer && (
-              <>
+              <div key={index}>
                 {product.images ? (
-                  <Link
-                    key={index}
+                  <Link                    
                     href={`/${product.slug}`}
                     className={styles.list__product}
                   >
@@ -53,7 +52,7 @@ export function Promotion(props) {
                     </div>
                   </Link>
                 )}
-              </>
+              </div>
             )
         )}
       </div>
